@@ -12,7 +12,7 @@ class AdminSiteTests(TestCase):
 
     def setUp(self):
         """Create user and client."""
-        self.client = Client()
+        self.client = Client() #client() allows to make get/post request act as a client side
         self.admin_user = get_user_model().objects.create_superuser(
             email='admin@example.com',
             password='testpass123',
